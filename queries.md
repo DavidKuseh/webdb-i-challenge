@@ -26,4 +26,8 @@ UPDATE customers set postalcode=11122 where customerid=92;
 
 ## (Stretch) Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted
 
+SELECT COUNT(DISTINCT city) AS city FROM customers;
+
 ## (Stretch) Find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name
+
+SELECT * FROM suppliers WHERE LENGTH(suppliername) > 20;
